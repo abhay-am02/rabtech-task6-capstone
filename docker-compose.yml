@@ -26,7 +26,7 @@ services:
     restart: unless-stopped
     environment:
       GF_SECURITY_ADMIN_USER: admin
-      GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_PASSWORD:-ChangeMe123!}"
+      GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_PASSWORD:-RabTechGrafana2026!Secure}"
     ports:
       - "127.0.0.1:3000:3000"
     depends_on:
