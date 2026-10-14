@@ -1,0 +1,11 @@
+groups:
+  - name: rabtech-alerts
+    rules:
+      - alert: ApplicationDown
+        expr: up{job="rabtech-app"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "RabTech application is down"
+          description: "Prometheus cannot scrape the application metrics endpoint."
